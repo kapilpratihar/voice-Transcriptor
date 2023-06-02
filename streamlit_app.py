@@ -151,6 +151,3 @@ if Path('transcription.txt').is_file():
 	download_transcription()
 	os.remove('transcription.txt')
 
-# References (Code modified and adapted from the following)
-# 1. https://github.com/misraturp/Real-time-transcription-from-microphone
-# 2. https://medium.com/towards-data-science/real-time-speech-recognition-python-assemblyai-13d35eeed226
