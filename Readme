@@ -1,0 +1,17 @@
+ Based on the provided code, the project aims to develop a real-time transcription web application using Streamlit. The application allows users to transcribe their speech by clicking a start button to initiate the microphone and streaming the audio data to the AssemblyAI API for transcription. The transcription results are displayed in real-time on the web interface.
+
+Here's a breakdown of the key components and functionality of the code:
+
+1.Audio Parameters: The application allows users to configure audio parameters such as frames per buffer and sample rate through a sidebar.
+
+2.Start/Stop Buttons: The interface includes two buttons for starting and stopping the audio transmission. Clicking the "Start" button initiates the microphone and begins streaming the audio data to the AssemblyAI API. Clicking the "Stop" button stops the transmission.
+
+3.WebSockets Communication: The code uses the websockets library to establish a connection with the AssemblyAI API via a WebSocket. The send_receive() function runs an asynchronous event loop to handle sending audio data and receiving transcription results concurrently.
+
+4.Sending Audio Data: The send() function continuously reads audio data from the microphone stream and sends it to the AssemblyAI API in base64-encoded format. It handles potential exceptions, such as connection closed errors, and stops sending data when the user clicks the "Stop" button.
+
+5.Receiving Transcription Results: The receive() function receives the transcription results from the AssemblyAI API in real-time. It appends the transcribed text to the transcription_list and displays the current result on the web interface.
+
+6.Writing Transcription to File: After stopping the transcription, the code writes the complete transcription stored in the transcription_list to a file named transcription.txt. The user can then download the transcription file using the provided download button.
+
+It's important to note that the code you provided may not be complete, and there might be additional work needed to address issues related to the API voice scripter.
